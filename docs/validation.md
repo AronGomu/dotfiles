@@ -15,6 +15,12 @@ Root `AGENTS.md` owns setup. This document defines evidence, not a claim that ta
 | V7 | `python3 scripts/secret_scan.py` | Redacted path/line/rule output only; 0 findings. Checks token/key/JWT/private-message URL patterns + private filenames. No general entropy/PII/license/media-content detection. |
 | V8 | `gitleaks dir --no-banner --redact .` if supported by installed version (`gitleaks --help` first) | Full scanner report redacted, 0 unresolved findings. No fetched global install during export. Missing scanner is recorded, not silently claimed passed. Before publication install/review scanner through approved native route; review outgoing history/diff and binary media manually. |
 
+## Pi remembered defaults
+
+- P1. Run `node --experimental-vm-modules --test tests/pi-remember-model.mjs`. Pi must be importable; otherwise set `PI_TEST_PACKAGE_DIR` to inspected package root containing `dist/index.js`. Real SettingsManager, isolated scratch settings, mocked extension event context; no live config/API writes.
+- P2. Expected: 8 tests pass, zero skipped. Covers model/thinking defaults read by fresh SettingsManager, rapid events, teardown drain, headless isolation, per-model override, unrelated/project settings, malformed JSON. Test alone does not prove deployed TUI behavior.
+- P3. After user deployment: change model + thinking, `/new`, quit/restart plain `pi`; confirm last pair. Explicit CLI/project overrides still win. Details: `config/pi/agent/extensions/remember-model/README.md`.
+
 ## Media preservation checks
 
 `ytmusic-sync` retains stale and unrelated `.m3u8` files, including with `--prune`.
