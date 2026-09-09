@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Messenger
+Exec=brave-origin "https://www.facebook.com/messages/"
+Icon=brave-origin
+Terminal=false
+Categories=Network;

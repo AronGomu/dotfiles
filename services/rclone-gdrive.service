@@ -1,0 +1,18 @@
+[Unit]
+Description=Mount Google Drive
+ConditionPathExists=%h/.config/rclone/rclone.conf
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=notify
+ExecStartPre=-/usr/bin/fusermount3 -uz %h/GoogleDrive
+ExecStartPre=/usr/bin/mkdir -p %h/GoogleDrive
+ExecStart=/usr/bin/rclone mount gdrive: %h/GoogleDrive --config=%h/.config/rclone/rclone.conf --vfs-cache-mode=writes --dir-cache-time=1h --attr-timeout=1h
+ExecStartPost=/usr/bin/bash -c 'find "%h/GoogleDrive" -maxdepth 4 >/dev/null 2>&1 &'
+ExecStop=-/usr/bin/fusermount3 -uz %h/GoogleDrive
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

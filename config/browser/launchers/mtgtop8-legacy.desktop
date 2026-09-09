@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=MTGTop8 - Legacy
+Exec=brave-origin "https://mtgtop8.com/format?f=LE"
+Icon=brave-origin
+Terminal=false
+Categories=Network;

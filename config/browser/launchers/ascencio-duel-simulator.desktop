@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=ASCENCIO - Duel Simulator
+Exec=brave-origin "http://localhost:4300/"
+Icon=brave-origin
+Terminal=false
+Categories=Network;

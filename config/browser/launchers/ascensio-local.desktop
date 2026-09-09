@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Ascensio - http://localhost:4202
+Exec=brave-origin "http://localhost:4202"
+Icon=brave-origin
+Terminal=false
+Categories=Development;Network;

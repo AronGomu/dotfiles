@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Outlook
+Exec=brave-origin "https://outlook.live.com/mail/"
+Icon=brave-origin
+Terminal=false
+Categories=Network;

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=github-agentsystemlabs-core
+Exec=brave-origin "https://github.com/AgentSystemLabs/core"
+Icon=brave-origin
+Terminal=false
+Categories=Network;

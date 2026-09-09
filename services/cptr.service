@@ -1,0 +1,16 @@
+[Unit]
+Description=Open WebUI Computer
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/cptr run --host 127.0.0.1 --port 8000 --headless
+WorkingDirectory=%h
+Restart=on-failure
+RestartSec=5
+UMask=0077
+Environment=HOME=%h
+Environment=CPTR_DATA_DIR=%h/.cptr
+Environment=PATH=%h/.local/bin:%h/.dotnet/tools:/usr/local/bin:/usr/bin:/bin
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=X
+Exec=brave-origin "https://x.com/"
+Icon=brave-origin
+Terminal=false
+Categories=Network;

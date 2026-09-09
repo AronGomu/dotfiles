@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=File Explorer (dev)
+Exec=sh -c "exec \\"\\$HOME/projects/FileExplorer/target/release/src-tauri\\""
+Icon=file-explorer
+Terminal=false
+Categories=Utility;FileManager;Development;

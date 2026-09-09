@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Impeccable
+Exec=brave-origin "https://github.com/pbakaus/impeccable"
+Icon=brave-origin
+Terminal=false
+Categories=Network;

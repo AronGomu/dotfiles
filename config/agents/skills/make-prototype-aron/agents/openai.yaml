@@ -1,0 +1,5 @@
+interface:
+  display_name: "Make Prototype Aron"
+  short_description: "Validate logic or UI with throwaway prototypes"
+policy:
+  allow_implicit_invocation: false

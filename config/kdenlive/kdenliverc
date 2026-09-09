@@ -1,0 +1,7 @@
+[UiSettings]
+ColorScheme=BreezeDark
+
+[speech]
+vosk_text_model=vosk-model-fr-0.22
+vosk_srt_model=vosk-model-fr-0.22
+whisperModel=turbo

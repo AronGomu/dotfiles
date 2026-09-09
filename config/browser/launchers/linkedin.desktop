@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=link - LinkedIn
+Exec=brave-origin "https://www.linkedin.com/feed/"
+Icon=brave-origin
+Terminal=false
+Categories=Network;

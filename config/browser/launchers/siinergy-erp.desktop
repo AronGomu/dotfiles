@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Siinergy ERP
+Exec=brave-origin "http://erpcloud.siinergy.net/"
+Icon=brave-origin
+Terminal=false
+Categories=Network;

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=StarCraft: Brood War
+Exec=sh -c "export WINEPREFIX=\\"\\$HOME/Games/prefixes/starcraft\\" WINEDLLOVERRIDES=\\"mscoree,mshtml=\\"; exec gamescope -w 640 -h 480 -W 1920 -H 1080 -f -- wine \\"\\$HOME/Games/Starcraft/StarCraft.exe\\""
+Icon=applications-games
+Terminal=false
+Categories=Game;

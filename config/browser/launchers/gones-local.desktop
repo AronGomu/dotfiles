@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Gones - http://localhost:4200
+Exec=brave-origin "http://localhost:4200"
+Icon=brave-origin
+Terminal=false
+Categories=Development;Network;

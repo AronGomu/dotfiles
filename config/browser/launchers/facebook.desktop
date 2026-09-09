@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Facebook
+Exec=brave-origin "https://facebook.com/"
+Icon=brave-origin
+Terminal=false
+Categories=Network;

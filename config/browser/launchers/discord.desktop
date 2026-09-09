@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Discord
+Exec=brave-origin "https://discord.com/channels/@me"
+Icon=brave-origin
+Terminal=false
+Categories=Network;

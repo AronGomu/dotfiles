@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=File Explorer
+Exec=file-explorer
+Icon=file-explorer
+Terminal=false
+Categories=Utility;FileManager;

@@ -1,0 +1,7 @@
+# User identity deliberately unset. Configure locally, never infer old identity.
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
+[push]
+	autoSetupRemote = true

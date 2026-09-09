@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Maps
+Exec=brave-origin "https://www.google.com/maps"
+Icon=brave-origin
+Terminal=false
+Categories=Network;

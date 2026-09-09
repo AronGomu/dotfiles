@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Claude
+Exec=brave-origin "https://claude.ai/"
+Icon=brave-origin
+Terminal=false
+Categories=Network;

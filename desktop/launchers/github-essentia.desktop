@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Essentia
+Exec=sh -c "exec nvim \\"\\$HOME/projects/essentia\\""
+Icon=nvim
+Terminal=true
+Categories=Development;

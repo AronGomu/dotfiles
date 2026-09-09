@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=github-gones
+Exec=brave-origin "https://github.com/AronGomu/gones"
+Icon=brave-origin
+Terminal=false
+Categories=Network;

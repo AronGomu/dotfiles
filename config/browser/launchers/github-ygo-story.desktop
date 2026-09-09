@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=github-ygo-story
+Exec=brave-origin "https://github.com/AronGomu/ygo-story-duel-simulator"
+Icon=brave-origin
+Terminal=false
+Categories=Network;

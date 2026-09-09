@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Google Drive
+Exec=brave-origin "https://drive.google.com/drive/my-drive"
+Icon=brave-origin
+Terminal=false
+Categories=Network;

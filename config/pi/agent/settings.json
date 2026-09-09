@@ -1,0 +1,44 @@
+{
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-5.6-sol",
+  "defaultThinkingLevel": "low",
+  "hideThinkingBlock": true,
+  "enabledModels": [
+    "openai-codex/gpt-6-astra",
+    "openai-codex/gpt-5.6-sol",
+    "openai-codex/gpt-5.6-luna"
+  ],
+  "packages": [
+    {
+      "source": "npm:pi-subagents@0.38.0"
+    },
+    {
+      "source": "npm:@adrianapan/pikit@1.1.7",
+      "extensions": [
+        "!agent/extensions/footer/index.ts",
+        "!agent/extensions/permission-gate/index.ts",
+        "!agent/extensions/subagents/index.ts",
+        "!agent/extensions/web-access/index.ts"
+      ]
+    }
+  ],
+  "theme": "slop",
+  "quietStartup": true,
+  "enableInstallTelemetry": false,
+  "retry": {
+    "enabled": true,
+    "maxRetries": 5,
+    "baseDelayMs": 10000,
+    "provider": {
+      "timeoutMs": 45000,
+      "maxRetries": 0,
+      "maxRetryDelayMs": 10000
+    }
+  },
+  "httpIdleTimeoutMs": 45000,
+  "compaction": {
+    "enabled": true,
+    "reserveTokens": 16384,
+    "keepRecentTokens": 20000
+  }
+}

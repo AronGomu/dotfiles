@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Grok
+Exec=brave-origin "https://grok.com/"
+Icon=brave-origin
+Terminal=false
+Categories=Network;

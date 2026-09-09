@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=YGO X MTG: Essentia - MSE Menu
+Exec=sh -c "cd \\"\\$HOME/projects/essentia\\" && exec .venv/bin/python launcher/mse_project_menu.pyw"
+Icon=applications-graphics
+Terminal=false
+Categories=Graphics;Development;

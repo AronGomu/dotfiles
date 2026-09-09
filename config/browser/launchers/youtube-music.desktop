@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=YouTube Music
+Exec=brave-origin "https://music.youtube.com/"
+Icon=brave-origin
+Terminal=false
+Categories=AudioVideo;Network;

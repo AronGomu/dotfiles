@@ -1,0 +1,23 @@
+# requirement<TAB>self-contained output paths separated by semicolon
+K1	config/nvim/init.lua;config/nvim/lua/config;config/nvim/lua/utils/path.lua;config/nvim/lazy-lock.json;manifests/sources.md
+K2	config/nvim/lua/plugins/lsp.lua;config/nvim/lua/plugins/dotnet.lua;config/nvim/lua/plugins/treesitter.lua;manifests/tools.md
+K3	config/pi/agent/settings.json;config/pi/agent/claude-bridge.json;config/pi/agent/keybindings.json;config/pi/agent/configs;config/pi/agent/extensions;config/pi/agent/prompts
+K4	config/agents/GLOBAL_RULES.md;config/agents/skills;vendor/skills;docs/deployment.md
+K5	config/claude;config/codex;docs/auth.md
+K6	config/shell;config/git;config/ghostty;config/yazi
+K7	manifests/tools.md
+K8	manifests/tools.md;AGENTS.md
+K9	manifests/repos.tsv;bin/clone-repos;config/shell/bashrc.sh
+K11	config/herdr;bin/herdr-notify-send;bin/herdr-with-notify;manifests/sources.md
+K12	config/pi/agent/configs/env.example;docs/deployment.md;docs/auth.md;AGENTS.md
+O1	desktop/preferences.md
+O2	desktop/preferences.md;manifests/tools.md
+O3	bin/remove-silence;bin/social-square;bin/ytmusic-sync;config/pi/agent/prompts;config/agents/skills/cut-retakes-aron;config/agents/skills/data;config/shell/remove-silence.conf
+O4	config/kdenlive/kdenliverc;desktop/preferences.md;manifests/tools.md
+O5	config/browser/managed-bookmarks.json;config/browser/bookmarks.xbel;config/browser/external-extensions;config/browser/extensions.tsv;config/browser/launchers;config/shell/bashrc.sh
+O7	services/rclone-gdrive.service;services/rclone-gdrive-config.path
+O8	desktop/preferences.md;docs/auth.md
+O9	services/cptr.service;manifests/tools.md
+O10	desktop/preferences.md;desktop/launchers;manifests/tools.md
+SYNC	config/agents/skills/sync-config-aron/SKILL.md;config/agents/skills/sync-config-aron/agents/openai.yaml;config/agents/GLOBAL_RULES.md;AGENTS.md;docs/deployment.md;docs/validation.md
+S15	config/agents/skills/graphify;config/agents/skills/make-features-aron;vendor/skills

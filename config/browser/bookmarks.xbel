@@ -1,0 +1,68 @@
+<xbel version="1.0">
+  <folder>
+    <title>Synced</title>
+    <bookmark href="https://github.com/AronGomu/Essentia">
+      <title>github - Essentia</title>
+    </bookmark>
+    <bookmark href="https://drive.google.com/drive/my-drive">
+      <title>Google Drive</title>
+    </bookmark>
+    <bookmark href="https://chatgpt.com/">
+      <title>ChatGPT</title>
+    </bookmark>
+    <bookmark href="https://claude.ai/">
+      <title>Claude</title>
+    </bookmark>
+    <bookmark href="https://grok.com/">
+      <title>Grok</title>
+    </bookmark>
+    <bookmark href="https://scryfall.com/">
+      <title>Scryfall</title>
+    </bookmark>
+    <bookmark href="https://arongomu.github.io/gones/">
+      <title>Ascencio Remote</title>
+    </bookmark>
+    <bookmark href="http://localhost:4300/">
+      <title>ASCENCIO - Duel Simulator</title>
+    </bookmark>
+    <bookmark href="http://localhost:4301/">
+      <title>ASCENCIO - Deckbuilder</title>
+    </bookmark>
+    <bookmark href="http://localhost:4302/">
+      <title>ASCENCIO - VN</title>
+    </bookmark>
+    <bookmark href="https://outlook.live.com/mail/">
+      <title>Outlook</title>
+    </bookmark>
+    <bookmark href="https://discord.com/channels/@me">
+      <title>Discord</title>
+    </bookmark>
+    <bookmark href="https://www.facebook.com/messages/">
+      <title>Messenger</title>
+    </bookmark>
+    <bookmark href="https://facebook.com/">
+      <title>Facebook</title>
+    </bookmark>
+    <bookmark href="https://mtgtop8.com/format?f=LE">
+      <title>MTGTop8 - Legacy</title>
+    </bookmark>
+    <bookmark href="https://www.instagram.com/">
+      <title>Instagram</title>
+    </bookmark>
+    <bookmark href="https://x.com/">
+      <title>X</title>
+    </bookmark>
+    <bookmark href="http://erpcloud.siinergy.net/">
+      <title>Siinergy ERP</title>
+    </bookmark>
+    <bookmark href="https://monportail.siinergy.net/">
+      <title>Siinergy Portail</title>
+    </bookmark>
+    <bookmark href="https://www.google.com/maps">
+      <title>Maps</title>
+    </bookmark>
+    <bookmark href="https://github.com/pbakaus/impeccable">
+      <title>Impeccable</title>
+    </bookmark>
+  </folder>
+</xbel>

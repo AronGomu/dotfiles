@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+# Clone missing manifest checkouts only; never update or replace existing paths.
+set -euo pipefail
+use_https=0
+case "${1:-}" in
+  --help|-h) printf 'Usage: clone-repos [--https]\n'; exit 0 ;;
+  --https) use_https=1; shift ;;
+  '') ;;
+  *) printf 'error: unknown argument\n' >&2; exit 2 ;;
+esac
+[[ $# == 0 ]] || { printf 'error: unexpected arguments\n' >&2; exit 2; }
+root=$(dirname -- "$(dirname -- "$(readlink -f -- "${BASH_SOURCE[0]}")")")
+manifest=${DOTFILES_REPOS_MANIFEST:-$root/manifests/repos.tsv}
+[[ -f "$manifest" ]] || { printf 'error: manifest missing\n' >&2; exit 1; }
+urls=()
+paths=()
+while IFS=$'\t' read -r url path extra || [[ -n "$url" ]]; do
+  [[ -z "$url" || "$url" == \#* ]] && continue
+  if [[ -z "$path" || -n "$extra" || "$path" == /* || "$path" == */ || "$path" == *//* || "/$path/" == */../* || "/$path/" == */./* || "$path" == *$'\r'* ]]; then
+    printf 'error: invalid manifest destination\n' >&2
+    exit 2
+  fi
+  [[ "$url" != -* || "$url" == '-' ]] || { printf 'error: invalid remote\n' >&2; exit 2; }
+  # Reject symlink parents: a missing leaf must not redirect writes outside HOME.
+  parent="$HOME"
+  IFS=/ read -ra parts <<< "$path"
+  for ((i=0; i<${#parts[@]}-1; i++)); do
+    parent="$parent/${parts[i]}"
+    [[ ! -L "$parent" ]] || { printf 'error: symlink destination parent\n' >&2; exit 2; }
+  done
+  urls+=("$url")
+  paths+=("$path")
+done < "$manifest"
+for i in "${!urls[@]}"; do
+  url=${urls[i]}
+  path=${paths[i]}
+  target="$HOME/$path"
+  if [[ -e "$target" || -L "$target" ]]; then
+    printf 'skip   %s (existing path untouched)\n' "$path"
+    continue
+  fi
+  if [[ "$url" == '-' ]]; then
+    printf 'skip   %s (remote unset)\n' "$path"
+    continue
+  fi
+  if [[ "$use_https" == 1 && "$url" == git@github.com:* ]]; then
+    url="https://github.com/${url#git@github.com:}"
+  fi
+  printf 'clone  %s\n' "$path"
+  mkdir -p -- "$(dirname -- "$target")"
+  git clone -- "$url" "$target"
+done
+printf 'done.\n'

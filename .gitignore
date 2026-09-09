@@ -1,0 +1,35 @@
+# Secrets and private runtime state are never sources.
+.env
+.env.*
+!env.example
+!*.env.example
+auth.json
+auth.toml
+credentials.json
+rclone.conf
+trust.json
+models-store.json
+*.pem
+*.key
+*.p12
+*.pfx
+*.kdbx
+*.sqlite
+*.sqlite3
+*.db
+*.db-*
+# Scratch, package trees, generated output.
+.tmp/
+artifacts/
+.pi/
+.pi-subagents/
+__pycache__/
+*.pyc
+node_modules/
+.venv/
+.cache/
+sessions/
+logs/
+*.log
+*.hm-backup
+# Do not ignore authored skill media or plugin lock snapshots.

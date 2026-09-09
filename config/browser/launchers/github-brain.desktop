@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=github-brain
+Exec=brave-origin "https://github.com/AronGomu/brain"
+Icon=brave-origin
+Terminal=false
+Categories=Network;

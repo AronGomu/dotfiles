@@ -1,0 +1,4 @@
+{
+  "app.thinking.cycle": "shift+tab",
+  "tui.input.newLine": ["shift+enter", "ctrl+enter", "ctrl+j"]
+}

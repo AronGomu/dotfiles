@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=github-matt-pocock
+Exec=brave-origin "https://github.com/mattpocock/skills"
+Icon=brave-origin
+Terminal=false
+Categories=Network;

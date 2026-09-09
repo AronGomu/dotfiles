@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=OpenBW (BWAPI)
+Exec=sh -c "export OPENBW_MPQ_PATH=\\"\\$HOME/Games/Starcraft\\"; exec \\"\\$HOME/projects/openbw-env/run.sh\\""
+Icon=applications-games
+Terminal=true
+Categories=Game;Development;

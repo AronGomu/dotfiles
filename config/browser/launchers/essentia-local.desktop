@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Essentia - http://localhost:4201
+Exec=brave-origin "http://localhost:4201"
+Icon=brave-origin
+Terminal=false
+Categories=Development;Network;

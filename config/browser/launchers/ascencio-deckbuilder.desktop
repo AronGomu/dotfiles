@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=ASCENCIO - Deckbuilder
+Exec=brave-origin "http://localhost:4301/"
+Icon=brave-origin
+Terminal=false
+Categories=Network;

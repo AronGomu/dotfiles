@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Separate wrapper name avoids recursion; notify-send override exists only in child PATH.
+set -euo pipefail
+herdr_bin=$(command -v herdr)
+shim_dir="${XDG_DATA_HOME:-$HOME/.local/share}/dotfiles/herdr-notify"
+[[ -x "$shim_dir/notify-send" ]] || {
+  printf 'error: Herdr notification shim not deployed; read dotfiles AGENTS.md\n' >&2
+  exit 1
+}
+export HERDR_BIN_PATH="$herdr_bin"
+PATH="$shim_dir:$PATH" exec "$herdr_bin" "$@"

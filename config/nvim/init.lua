@@ -1,0 +1,6 @@
+require 'config.options'
+require 'config.topbar'
+require 'config.filetypes'
+require 'config.autocmds'
+require 'config.keymaps'
+require 'config.lazy'

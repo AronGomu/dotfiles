@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Ascencio Remote
+Exec=brave-origin "https://arongomu.github.io/gones/"
+Icon=brave-origin
+Terminal=false
+Categories=Network;

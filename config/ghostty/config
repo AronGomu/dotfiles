@@ -1,0 +1,10 @@
+font-family = JetBrainsMono Nerd Font
+font-size = 12
+background-opacity = 1.0
+window-decoration = true
+confirm-close-surface = false
+copy-on-select = clipboard
+keybind = alt+backspace=text:\x1b\x7f
+# Free ctrl+enter for apps (Pi newline); fullscreen on F11.
+keybind = ctrl+enter=unbind
+keybind = f11=toggle_fullscreen

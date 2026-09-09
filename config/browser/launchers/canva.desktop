@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=can - Canva
+Exec=brave-origin "https://www.canva.com/"
+Icon=brave-origin
+Terminal=false
+Categories=Graphics;Network;
