@@ -21,3 +21,4 @@ Portable personal config for native Omarchy. Full Neovim, Pi/Claude/Codex + shar
 No boot/disk/OS framework, secrets/history, old OpenWhispr patches, bar auto-hide patch, grok-imagine, or DaVinci. Optional extra desktop prefs/troubleshooting stay opt-in. Independent Grok CLI remains supported.
 
 Selected meme/sound assets retained locally. Redistribution rights need review; do not publish publicly before resolving license/privacy risks. Third-party snapshots retain available licenses; no blanket license imposed.
+# dotfiles
