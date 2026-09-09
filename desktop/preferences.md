@@ -12,7 +12,7 @@ Native Omarchy owns upstream defaults, updates, drivers, shell implementation. I
 | O1f | `Super+Shift+B` manually hides/shows bar using installed supported bar-control command/IPC. Resolve existing shortcut conflict explicitly. No idle timer, edge trigger, old QML patch. | Two presses hide/show; idle never hides bar. |
 | O2 | Current normal OpenWhispr. Prefer `Ctrl+Space` toggle; Escape cancel through app's supported shortcut setup. No legacy D-Bus bindings, AppImage patches, forced socket, sg wrapper. | Dictation/cancel/paste work without stuck modifiers; test normal text app. |
 | O4 | Normal Kdenlive, OBS Studio, GIMP. BreezeDark Kdenlive; VOSK FR/EN + Whisper turbo preferences. No DaVinci. | Apps launch; speech models discovered after separate download. |
-| O5 | Brave Origin, personal `Default`, MTGones `Profile 1`; full extension/launcher/bookmark selections in `config/browser/`. | Both profile shortcuts open intended profile; five extensions present; public launchers work. |
+| O5 | **Brave Origin is the required default browser**, using personal `Default` profile for HTTP/HTTPS links, HTML/XHTML files, and Omarchy's browser launcher/shortcut. Do not substitute regular Brave or another browser. Keep MTGones `Profile 1` as a separate explicit shortcut; full extension/launcher/bookmark selections in `config/browser/`. | Default-browser and MIME queries resolve to Origin; external links, local HTML, and Omarchy browser shortcut open personal `Default`. Both profile shortcuts open intended profile; five extensions present; public launchers work. |
 | O7 | `gdrive:` → `~/GoogleDrive`, FUSE3, writes VFS cache, 1h dir/attribute caches; path/service units. | Re-authenticated Drive mount works as user. |
 | O8 | Tailscale + key-only non-root OpenSSH + mosh; Mullvad app/CLI. | Tailnet access works; LAN/WAN inbound SSH/mosh blocked; VPN coexistence checked. |
 | O9 | Open WebUI Computer `cptr`, loopback `127.0.0.1:8000`, umask `0077`, private `~/.cptr`. | `ss -ltn` shows no wildcard bind; data never in Git. |
@@ -26,8 +26,25 @@ Native Omarchy owns upstream defaults, updates, drivers, shell implementation. I
 
 ## Optional only
 
-- P1. O6: MIME defaults, Dolphin dimensions/tooltips, GTK/Qt dark prefs (Noto Sans 10/Breeze), terminal chooser, file-manager bookmarks, Obsidian, Thunderbird, CopyQ, KeePassXC. Ask before importing additional prefs; existing Omarchy defaults win otherwise.
+- P1. O6: Other MIME defaults (browser associations are required by O5), Dolphin dimensions/tooltips, GTK/Qt dark prefs (Noto Sans 10/Breeze), terminal chooser, file-manager bookmarks, Obsidian, Thunderbird, CopyQ, KeePassXC. Ask before importing additional prefs; existing Omarchy defaults win otherwise.
 - P2. O11: old monitor-hotplug, portal, cursor, OpenWhispr troubleshooting. Do not install old workarounds. Record new symptoms/repro before adaptation. FileExplorer `WEBKIT_DISABLE_DMABUF_RENDERER=1` only if renderer issue reproduced.
+
+## Default browser setup — required O5
+
+- B1. Inspect installed Brave Origin executable and desktop entry; do not guess an Arch package's desktop ID or reuse a Nix-store path. Ensure selected entry's `Exec` launches Origin with `--profile-directory=Default` and accepts URLs/files; create a user-local desktop entry if needed. Preserve MTGones shortcut separately.
+- B2. Set `origin_desktop_id` to that verified desktop entry's filename, then run these commands on target as the desktop user (not root). Merge only these associations; preserve unrelated MIME prefs.
+
+```bash
+xdg-settings set default-web-browser "$origin_desktop_id"
+xdg-mime default "$origin_desktop_id" x-scheme-handler/http x-scheme-handler/https text/html application/xhtml+xml
+xdg-settings get default-web-browser
+for mime in x-scheme-handler/http x-scheme-handler/https text/html application/xhtml+xml; do
+  xdg-mime query default "$mime"
+done
+```
+
+- B3. Configure installed Omarchy's supported browser selector/launcher and browser shortcut to use the same Origin personal profile. Inspect current launcher behavior; setting XDG associations alone is not proof. Use user overrides, not upstream script patches. Align `BROWSER` if a conflicting override exists.
+- B4. Verify every query returns selected Origin desktop ID. Open an HTTPS link from another app, a disposable local HTML file, and Omarchy's browser shortcut; confirm Origin personal `Default` each time. Repeat after login. These browser defaults are mandatory, not part of optional O6 prefs.
 
 ## Remote-access security boundary
 
