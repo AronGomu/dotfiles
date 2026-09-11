@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Tailscale (disconnect other VPNs)
+Comment=Disconnect known VPNs, connect Tailscale, open browser login when needed
+Exec=tailscale-open
+Icon=network-vpn
+Terminal=true
+Categories=Network;

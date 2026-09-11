@@ -15,6 +15,12 @@ Root `AGENTS.md` owns setup. This document defines evidence, not a claim that ta
 | V7 | `python3 scripts/secret_scan.py` | Redacted path/line/rule output only; 0 findings. Checks token/key/JWT/private-message URL patterns + private filenames. No general entropy/PII/license/media-content detection. |
 | V8 | `gitleaks dir --no-banner --redact .` if supported by installed version (`gitleaks --help` first) | Full scanner report redacted, 0 unresolved findings. No fetched global install during export. Missing scanner is recorded, not silently claimed passed. Before publication install/review scanner through approved native route; review outgoing history/diff and binary media manually. |
 
+## Tailscale launcher
+
+- T1. Run `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -p test_tailscale_open.py -v`. Mocked commands cover disconnect, failure, unknown tunnels, authenticated startup, browser login, missing dependency, and timeout. No live VPN/service/browser mutations.
+- T2. Validate `desktop/launchers/tailscale-open.desktop` with V1/V2. Terminal must remain enabled; executable `bin/tailscale-open` must be on desktop PATH after deployment. Nix mirror script/test/doc must remain byte-identical.
+- T3. After user deployment, invoke locally with informed VPN-disconnect consent. Check browser login if logged out, local tailnet IP on success, preserved firewall/DNS/security policy on failure. Live network/auth validation is separate from offline mocks; never store auth URLs as evidence.
+
 ## Pi remembered defaults
 
 - P1. Run `node --experimental-vm-modules --test tests/pi-remember-model.mjs`. Pi must be importable; otherwise set `PI_TEST_PACKAGE_DIR` to inspected package root containing `dist/index.js`. Real SettingsManager, isolated scratch settings, mocked extension event context; no live config/API writes.
@@ -63,7 +69,7 @@ this source-preservation fix pass.
 
 ## Sync skill scenario gate
 
-Skill is agent procedure, not automated Git helper. Do not substitute string-presence tests for actual transaction evidence. Initial export has no authorized real remote; disposable local-repo exercise remains separate review/runtime gate. No claims these scenarios were executed during source export.
+Skill is agent procedure, not automated Git helper. Do not substitute string-presence tests for actual transaction evidence. Authoritative remote/branch now configured in root AGENTS.md; disposable local-repo exercise remains separate review/runtime gate. No claims these scenarios were executed during source export.
 
 | ID | Disposable scenario | Required behavior |
 |---|---|---|

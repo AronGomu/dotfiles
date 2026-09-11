@@ -1,6 +1,6 @@
 # remote_url<TAB>destination_relative_to_HOME
 # '-' means user-owned remote unset; never infer or create it.
--	config/dotfiles
+git@github.com:AronGomu/dotfiles.git	config/dotfiles
 git@github.com:AronGomu/ygo-story-duel-simulator.git	projects/ascencio
 git@github.com:AronGomu/YGO-x-MTG.git	projects/essentia
 git@github.com:AronGomu/gones.git	projects/gones
